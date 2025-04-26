@@ -1,122 +1,41 @@
 # git_assignment_HeroVired
-##{
+
 Q1: CalculatorPlus Application
-Objective: Implement a simple Python calculator with an additional square root feature.
+Implementing a simple Python calculator.
 
-Steps Performed:
-Created the repository git_assignment_HeroVired.
-
-Created a branch dev and added the base Python code for CalculatorPlus.
-
-Implemented the square_root() function:
-
-python
-Copy
-Edit
-def square_root(self, x):
-    return math.sqrt(x)
-Uncommented and tested the square root feature in __main__.
-
-Merged the dev branch into the main branch.
-
-Created a GitHub release: Version 1.0.
-
-Added classmates as collaborators for code review access.
-
-Created a new branch feature/sqrt for the square root feature separately.
-
-While working, fixed a bug in the divide() function to handle division by zero:
-
-python
-Copy
-Edit
-def divide(self, a, b):
-    if b == 0:
-        raise ValueError("Cannot divide by zero.")
-    return a / b
-Completed the square root feature and created a pull request.
-
-Requested a code review, made changes based on feedback.
-
-Merged feature/sqrt into dev.
-
-After testing in dev, merged into main.
-
-Created GitHub release: Version 2.0.
+##Steps Performed:
+1. Created the repository git_assignment_HeroVired.
+2.Created a branch dev and added the base Python code for CalculatorPlus.
+3. Tested the code and Merged the dev branch into the main branch.
+4. Created a GitHub release: Version1.0.
+5. Created a new branch feature/sqrt for the square root feature separately
+6. Fixed a bug in the divide() function to handle division by zero:
+7. Added collaborators for code review and requested a to Approve the pull request.
+8. Merged feature/sqrt into dev and tested code again in dev, them merged to main.
+9. Created GitHub release: Version 2.0.
 
 Q2: Git LFS Integration
-Objective: Manage large files (>200MB) using Git LFS.
 
-Steps Performed:
-Installed Git LFS:
+##Steps Performed:
+1. Installed Git LFS using git lfs install
+2. Created a new branch lfs.
+3. Tracked large file using git lfs track "*.mpeg"
+4. Added a large file (over 200MB) to the repository.
+5. Committed and pushed the file to GitHub.
+6. Cloned the repository on a different machine to confirm that the large file was properly downloaded using Git LFS.
 
-bash
-Copy
-Edit
-git lfs install
-Created a new branch lfs.
+Q3: Geometry Calculator
 
-Tracked large files:
-
-bash
-Copy
-Edit
-git lfs track "*.zip"
-Added a large file (over 200MB) to the repository.
-
-Committed and pushed the file to GitHub.
-
-Verified that the file is correctly uploaded via Git LFS.
-
-Cloned the repository on a different machine to confirm that the large file was properly downloaded using Git LFS.
-
-Q3: Geometry Calculator with Git Stash
-Objective: Use Git Stash to manage multiple features simultaneously without committing incomplete changes.
-
-Steps Performed:
-Created a branch geometry-calculator.
-
-Created a new feature branch feature/circle-area.
-
-Started implementing the circle area feature.
-
-Stashed the incomplete changes:
-
-bash
-Copy
-Edit
-git stash push -m "Circle area WIP"
-Created another branch feature/rectangle-area.
-
-Started implementing rectangle area feature.
-
-Stashed the incomplete changes:
-
-bash
-Copy
-Edit
-git stash push -m "Rectangle area WIP"
-Switched back to feature/circle-area.
-
-Applied stashed changes:
-
-bash
-Copy
-Edit
-git stash pop stash@{0}
-Completed and committed the circle area feature.
-
-Switched to feature/rectangle-area.
-
-Applied the stashed changes.
-
-Completed and committed the rectangle area feature.
-
-Pushed both feature branches to GitHub.
-
-Created separate pull requests for both features targeting dev branch.
-
-Got the pull requests reviewed by teammates.
-
-After approval, merged both features into dev, then merged dev into main.
-}
+##Steps Performed:
+1. Created a new feature branch feature/circle-area.
+2. Started implementing the circle area feature.
+3. Stashed the incomplete changes using git stash push -m "Work in progress - Circle area feature"
+4. Created another branch feature/rectangle-area and started implementing rectangle area feature.
+5. Stashed the incomplete changes using git stash push -m "Work in progress - Rectangle area feature"
+6. Switched back to feature/circle-area and stashed changes:git stash apply
+7. Committed and Pushed code to the feature/circle-area branch.
+8. Switched to feature/rectangle-area and stashed changes.
+9. Committed and Pushed code to the feature/rectangle-area branch.
+10. Created separate pull requests for both features targeting dev branch.
+11. Got the pull requests reviewed by teammates.
+12. After approval, merged both features into dev, then merged dev into main.
